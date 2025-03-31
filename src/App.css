@@ -1,0 +1,44 @@
+/* src/App.css - Add or ensure these exist */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center; /* Center horizontally */
+  padding-bottom: 20px; /* Space at bottom */
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  border-bottom: 1px solid #e7e7e7;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.play-again-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #6aaa64; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px; /* Space above button */
+  transition: background-color 0.2s ease;
+}
+
+.play-again-button:hover {
+  background-color: #5a9a54;
+}
+
+/* Add any other global styles needed */

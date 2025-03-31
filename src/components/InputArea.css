@@ -1,0 +1,54 @@
+/* src/components/InputArea.css */
+.input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.input-area input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.input-area input[type="text"]:focus {
+  border-color: #6aaa64; /* Use a theme color */
+}
+
+.input-area input[type="text"]:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+
+.input-area button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #6aaa64; /* Green */
+    color: white;
+    border: 2px solid #6aaa64;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.2s ease;
+}
+
+.input-area button:hover:not(:disabled) {
+    background-color: #5a9a54;
+    border-color: #5a9a54;
+}
+
+.input-area button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}

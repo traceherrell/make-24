@@ -1,0 +1,53 @@
+/* src/components/GuessRow.css */
+.guess-row {
+    display: flex;
+    justify-content: space-between; /* Push expression and result apart */
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 2px solid #d3d6da; /* Light gray border */
+    border-radius: 5px;
+    min-height: 50px; /* Ensure consistent height */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff; /* Default background */
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.guess-row.empty {
+    background-color: #f8f9fa; /* Slightly off-white for empty rows */
+     border: 2px dashed #e0e0e0; /* Dashed border for empty */
+}
+
+/* Status colors - similar to Wordle */
+.guess-row.correct {
+    background-color: #6aaa64; /* Green */
+    border-color: #6aaa64;
+    color: white;
+}
+
+.guess-row.incorrect {
+    background-color: #f8d7da; /* Light Red/Pink for incorrect result */
+    border-color: #f5c6cb;
+    color: #721c24; /* Dark Red text */
+}
+
+.guess-row.error {
+    background-color: #fff3cd; /* Light Yellow for error */
+    border-color: #ffeeba;
+    color: #856404; /* Dark Yellow/Brown text */
+}
+
+.guess-row .expression {
+    font-family: 'Courier New', Courier, monospace; /* Make expression stand out */
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-right: 10px; /* Space between expression and result */
+    word-break: break-all; /* Prevent long expressions from overflowing */
+}
+
+.guess-row .result {
+    font-weight: bold;
+    font-size: 1.1rem;
+    white-space: nowrap; /* Keep result on one line */
+}
