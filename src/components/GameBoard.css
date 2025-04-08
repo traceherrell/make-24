@@ -1,9 +1,0 @@
-/* src/components/GameBoard.css */
-.game-board {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; /* Spacing between rows */
-    width: 90%;
-    max-width: 500px; /* Control max width */
-    margin: 0 auto 20px auto; /* Center board */
-}

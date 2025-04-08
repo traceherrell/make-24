@@ -42,3 +42,56 @@
 }
 
 /* Add any other global styles needed */
+/* src/components/NumberDisplay.css */
+.number-display {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.number-display h2 {
+margin-bottom: 10px;
+font-weight: normal;
+color: #555;
+}
+
+.numbers-container {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+.number-tile {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button {
+  box-sizing: content-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 2.5rem;
+  min-inline-size: 2.5rem;
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--on-primary);
+  padding: 0 1.5rem;
+  background-color: var(--primary);
+  margin: 0 .5rem;
+  border-radius: 1.25rem;
+  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
+  -webkit-user-select: none;
+  user-select: none;
+  gap: 1rem;
+  line-height: normal;
+}
