@@ -1,4 +1,11 @@
 /* src/App.css - Add or ensure these exist */
+
+:root {
+  --primary: #8f14dc; /* Purple */
+  --on-primary: #ffffff; /* White */
+  --speed3: 0.3s; /* Transition speed */
+}
+
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -10,19 +17,7 @@
   box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #f8f8f8;
-  padding: 10px 0;
-  border-bottom: 1px solid #e7e7e7;
-  width: 100%;
-  margin-bottom: 20px;
-}
 
-.App-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #333;
-}
 
 .play-again-button {
   padding: 10px 20px;
@@ -61,37 +56,77 @@ gap: 10px;
 }
 
 .number-tile {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #ccc;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.number-tile:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.number-tile.used {
+  background-color: #cccccc;
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.number-tile.success {
+  background-color: #4caf50;
+  color: white;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 5px #4caf50;
+  }
+  to {
+    box-shadow: 0 0 15px #4caf50;
+  }
+}
+
+.number-tile.operator {
+  background-color: #ffdc9c;
+}
+
+.number-tile.operator:hover {
+  background-color: #ffce6b;
 }
 
 button {
-  box-sizing: content-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  block-size: 2.5rem;
-  min-inline-size: 2.5rem;
-  font-size: .875rem;
-  font-weight: 500;
-  color: var(--on-primary);
-  padding: 0 1.5rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
   background-color: var(--primary);
-  margin: 0 .5rem;
-  border-radius: 1.25rem;
-  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
-  -webkit-user-select: none;
-  user-select: none;
-  gap: 1rem;
-  line-height: normal;
+  color: var(--on-primary);
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px; /* Space above button */
+  transition: background-color var(--speed3) ease, transform var(--speed3) ease;
+}
+button:hover {
+  background-color: #d55a00; /* Darker shade of primary */
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Space between rows */
+}
+.row > button {
+  margin: 0 5px; /* Space between tiles */
 }
